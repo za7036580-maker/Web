@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b12">
+<title>Anime X — Discover your next adventure</title>
+<style>
+:root{color-scheme:dark;--bg:#090b12;--panel:#141927;--muted:#a7aec0;--purple:#9b78ff;--pink:#ed5da8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f7f7fc;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}header{height:70px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff14;position:sticky;top:0;background:#090b12ed;backdrop-filter:blur(12px);z-index:2}.logo{font-size:25px;font-weight:950;letter-spacing:-1px}.logo span{color:var(--purple)}nav{display:flex;gap:24px;color:#c9cadd;font-size:14px}.hero{padding:80px 7%;background:radial-gradient(ellipse at 78% 25%,#7144c855,transparent 42%),linear-gradient(115deg,#17162b,#090b12 72%)}.eyebrow{color:#c9baff;letter-spacing:3px;text-transform:uppercase;font-size:11px;font-weight:800}.hero h1{font-size:clamp(42px,7vw,72px);line-height:1.02;max-width:700px;margin:18px 0}.hero h1 span{color:var(--purple)}.hero p{color:#b9bfd0;max-width:560px}.btn{display:inline-block;margin-top:20px;padding:12px 19px;border-radius:10px;background:linear-gradient(100deg,#8159e9,#d44c9a);font-weight:800}.section{padding:38px 7% 70px}.heading{display:flex;justify-content:space-between;align-items:center;gap:14px}.heading h2{font-size:24px}.search{background:#151b2a;border:1px solid #ffffff20;border-radius:10px;padding:12px;color:white;width:min(280px,55vw)}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 24px}.filter{border:1px solid #ffffff20;background:#151b2a;color:#cbd0df;border-radius:30px;padding:8px 14px;cursor:pointer}.filter.active,.filter:hover{background:#704bd1;color:white}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.card{background:var(--panel);border:1px solid #ffffff12;border-radius:14px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#9b78ff88}.poster{height:210px;background:linear-gradient(145deg,var(--c1),var(--c2));display:flex;align-items:end;padding:13px}.rating{background:#111827dd;border:1px solid #ffffff35;padding:4px 8px;border-radius:7px;font-size:12px}.details{padding:13px}.details h3{font-size:16px;margin:0 0 5px}.meta{font-size:12px;color:var(--muted)}.details p{font-size:13px;color:#b6bdcd;min-height:40px}.watch{font-size:12px;color:#c6b5ff;font-weight:800}.empty{color:var(--muted);grid-column:1/-1}footer{border-top:1px solid #ffffff15;padding:25px 7%;color:var(--muted);font-size:13px}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:620px){header{padding:0 5%}nav{gap:13px;font-size:12px}.hero,.section{padding-left:5%;padding-right:5%}.hero{padding-top:55px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.poster{height:165px}.heading{align-items:flex-start;flex-direction:column}.search{width:100%}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="#">ANIME <span>X</span></a><nav><a href="#home">Home</a><a href="#discover">Discover</a><a href="#about">About</a></nav></header>
+<main>
+<section class="hero" id="home"><div class="eyebrow">Your anime universe</div><h1>Find your next <span>adventure.</span></h1><p>Explore unforgettable stories, legendary heroes, and new worlds. Search anime and discover your next favorite series.</p><a class="btn" href="#discover">Explore anime ↓</a></section>
+<section class="section" id="discover"><div class="heading"><h2>Discover anime</h2><input class="search" id="search" type="search" placeholder="Search anime..." aria-label="Search anime"></div><div class="filters" id="filters"><button class="filter active" data-genre="All">All</button><button class="filter" data-genre="Action">Action</button><button class="filter" data-genre="Adventure">Adventure</button><button class="filter" data-genre="Fantasy">Fantasy</button><button class="filter" data-genre="Drama">Drama</button></div><div class="grid" id="grid"></div></section>
+<section class="section" id="about"><h2>About Anime X</h2><p style="color:#aeb5c6;max-width:700px">Anime X is an anime discovery website made for fans. Browse titles, search by name, and filter by genre. We do not host episodes or video; use official streaming services and check availability in your region.</p><p><a class="watch" href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Crunchyroll ↗</a>　<a class="watch" href="https://www.netflix.com/" target="_blank" rel="noopener">Netflix ↗</a></p></section>
+</main>
+<footer><strong>ANIME <span style="color:#9b78ff">X</span></strong> · Discover responsibly.</footer>
+<script>
+const shows=[
+["Attack on Titan","Action","2013","9.1","Humanity fights for survival behind enormous walls.","#283e50","#a76b4a"],
+["Demon Slayer","Action","2019","8.6","A young swordsman battles demons to save his sister.","#244d50","#b74d48"],
+["One Piece","Adventure","1999","9.0","A pirate crew sails toward the ultimate treasure.","#246d91","#e3a342"],
+["Jujutsu Kaisen","Action","2020","8.6","Students face dangerous curses in a hidden world.","#392e65","#b44c79"],
+["Frieren: Beyond Journey's End","Fantasy","2023","9.3","An elf mage reflects on friendship, time, and memory.","#3b6e77","#a8b7a0"],
+["Your Lie in April","Drama","2014","8.5","Music helps a pianist rediscover the color in life.","#4c7ca4","#e5a4a6"],
+["Fullmetal Alchemist: Brotherhood","Adventure","2009","9.1","Two brothers search for the philosopher's stone.","#77604b","#b7a17a"],
+["Spy x Family","Comedy","2022","8.4","A spy, an assassin, and a telepath form a family.","#486d61","#c49b63"]
+];
+let genre="All";
+function draw(){const q=document.querySelector("#search").value.toLowerCase();const list=shows.filter(s=>(genre==="All"||s[1]===genre)&&(s[0].toLowerCase().includes(q)||s[1].toLowerCase().includes(q)));document.querySelector("#grid").innerHTML=list.length?list.map(s=>'<article class="card"><div class="poster" style="--c1:'+s[5]+';--c2:'+s[6]+'"><span class="rating">★ '+s[3]+'</span></div><div class="details"><h3>'+s[0]+'</h3><div class="meta">'+s[2]+' · '+s[1]+'</div><p>'+s[4]+'</p><a class="watch" href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Find where to watch ↗</a></div></article>').join(""):'<p class="empty">No anime found. Try another search.</p>'}
+document.querySelector("#search").addEventListener("input",draw);
+document.querySelector("#filters").addEventListener("click",e=>{if(e.target.dataset.genre){genre=e.target.dataset.genre;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===e.target));draw()}});
+draw();
+</script>
+</body>
+</html>
